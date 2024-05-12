@@ -1,0 +1,306 @@
+:root {
+  --white-color: #fff;
+  --dark-blue: #3734a9;
+  --orange-color: #ff7f5c;
+  --light-blue-color: #4f46ba;
+  --quote-background: #c4c4c4;
+  --footer-line-color: #e5e5ea;
+  --feature-background: #c9e7f2;
+  --company-background: #f5f6f8;
+  --portfolio-box-color: #dbe4e9;
+  --hero-background: linear-gradient(
+    292.12deg,
+    #62bada -35.02%,
+    #c9e7f2 78.96%
+  );
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  color: var(--white-color);
+}
+
+.btn.f_14 {
+  width: 137px;
+  height: 52px;
+  padding: 16px 36px;
+  color: var(--white-color);
+  font-size: 14px;
+  background: var(--light-blue-color);
+}
+
+.btn.border {
+  width: 162px;
+  height: 60px;
+  border-radius: 47px;
+  -webkit-border-radius: 47px;
+  -moz-border-radius: 47px;
+  -ms-border-radius: 47px;
+  -o-border-radius: 47px;
+  background: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background: var(--hero-background);
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 1240px;
+  padding: 38px 0;
+  z-index: 25;
+}
+
+nav .logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.12px;
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a.drop::after{
+   content: url('image/dropdown.svg');
+   padding-left: 5px;
+}
+
+nav .nav-actions {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+}
+
+nav .nav-actions li a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.12px;
+  color:#000;
+}
+
+/* Hero section */
+.hero-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.hero-section .left h2{
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 80px;
+    margin-bottom: 0;
+    width: 646px;
+}
+
+.hero-section .left p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #64607D;
+    width: 510px;
+    margin-bottom: 56px;
+}
+
+.hero-section .right{
+    align-self: flex-end;
+    
+}
+
+.hero-section .right img{
+    height: 766px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vertical-align: middle; */
+    margin-bottom: -50px;
+}
+
+.hero-section .left .hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 53px;
+}
+
+.hero-section .left .hero-buttons .hero-btn.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:11px;
+}
+.hero-section .left .hero-buttons .hero-btn.icon span{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    color:var(--dark-blue)
+}
+.hero-section .left .hero-buttons .hero-btn.icon img{
+    height: 60px;
+    width: 60px;
+}
+
+.hero-section .left .hero-info {
+    display: flex;
+    align-items: center;
+    gap:24px;
+}
+
+.hero-section .left .hero-info .info{
+    display: flex;
+    justify-content: center;
+    gap:8px;
+}
+
+.hero-section .left .hero-info .info span{
+    font-size: 17px;
+    font-weight: 400;
+    color:#757095;
+}
+
+/* Hero Icons */
+.hero-icons{
+    display: none;
+}
+
+/* Company Section */
+.companies-section{
+    padding-top: 64px;
+    height: 239px;
+    background: var(--company-background);
+    margin-bottom: 71px;
+}
+
+.companies-section p{
+    text-align: center;
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30.05px;
+}
+
+.companies-section .companies{
+    display: flex;
+    gap:49.56px;
+}
+
+/* Portfolio section */
+.portfolio-section{
+   width: 100%; 
+}
+
+.portfolio-section .portfolio-info{
+    display: flex;
+    gap:123px;
+    margin-bottom: 75px;
+}
+
+.portfolio-section .portfolio-info .left h2{
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 66px;
+  width: 646px;
+  margin-bottom: 19px;
+  margin-top: 0;
+}
+
+.portfolio-section .portfolio-info .left p{
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 400;
+    width: 449px;
+}
+
+.portfolio-section .portfolio-info .right .port_box{
+    width: 402px;
+    height: 197px;
+    background:#C4C4C4;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+}
+
+.portfolio-section .portfolio-info .right .port_box::before{
+    content: url('image/quote.svg');
+    margin: 0;
+    position: absolute;
+    left:24px;
+    top:-20px;
+}
+
+.portfolio-section .portfolio-info .right .port_box p.cc{
+    padding: 38px 34px 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom:18px;
+    color:#000;
+}
+
+.portfolio-section .portfolio-info .right .port_box p.name{
+    padding:0 0 0 34px;
+    margin-bottom: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.portfolio-section .portfolio-boxes{
+    display: flex;
+}
+
+
+
