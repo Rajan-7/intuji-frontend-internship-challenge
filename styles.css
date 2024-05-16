@@ -1097,7 +1097,7 @@ footer form .submit-btn {
 
 footer .links p.e_p {
   width: 329px;
-  white-space: nowrap;
+  text-wrap: wrap;
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
@@ -1116,17 +1116,47 @@ footer p.copyright {
   font-weight: 400;
 }
 
+@media (max-width: 1250px){
+  .wrapper{
+    padding: 0 40px;
+  }
+  nav{
+    width: 100%;
+    padding: 40px;
+    right:0;
+    left: 0;
+  }
+
+  .transaction-section .transaction-down .right img{
+    height: 750px;
+    width: 550px;
+  }
+
+  .testimonial-section .tm-container .testimonials {
+    gap:20px;
+  }
+
+  .testimonial-section .tm-container .testimonials .testimonial{
+    width: 600px;
+  }
+
+  .testimonial-section .tm-container .testimonials .testimonial p.comment{
+    padding-left: 30px;
+  }
+
+  .testimonial-section .tm-container .testimonials .testimonial.first img{
+    width: 220px;
+    height: 350px;
+    margin-left: -40px;
+  }
+  
+}
+
 @media (max-width: 1100px) {
   .wrapper {
     padding: 0 100px;
   }
 
-  nav {
-    width: 100%;
-    right: 0;
-    left: 0;
-    padding: 36px 100px;
-  }
 
   nav.scrolled {
     padding: 15px 45px;
@@ -1135,12 +1165,13 @@ footer p.copyright {
   .hero-section,
   header {
     gap: 0px;
-    max-height: 1100px;
+    height: 1100px;
   }
 
   .hero-section h2 {
     margin: -80px 0 0 0;
   }
+
   .hero-section .right {
     margin-left: -160px;
   }
@@ -1172,10 +1203,15 @@ footer p.copyright {
   .transaction-section .transaction-down {
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 80px;
   }
 
   .transaction-section .transaction-down .right {
     margin-top: 20px;
+  }
+
+  .transaction-section .transaction-down .right img{
+    display: none;
   }
 
   .transaction-section .transaction-up .left {
@@ -1189,12 +1225,36 @@ footer p.copyright {
   .testimonial-section .tm-container .testimonials {
     flex-direction: column;
   }
+
+  .testimonial-section .tm-container .testimonials .testimonial {
+    height: auto;
+    width: 850px;
+  }
+
   .testimonial-section .tm-container .testimonials .testimonial.second {
     display: none;
   }
 
-  .features-section .ft-container .features-boxes .features-box-two {
-    display: none;
+  .testimonial-section .tm-container .testimonials .testimonial.second img {
+    margin-right: -100px;
+  }
+
+  .features-section {
+    height: auto;
+    padding-bottom: 100px;
+  }
+
+  .features-section .ft-container .features-boxes {
+    flex-direction: column;
+  }
+
+  .features-section .ft-container .features-boxes .features-box,
+  .features-section .ft-container .features-boxes .features-box-two .box {
+    width: auto;
+  }
+
+  .statistics-section {
+    width: auto;
   }
 
   .statistics-section .ss-container {
@@ -1223,5 +1283,23 @@ footer p.copyright {
 
   .faq-section .faq-container {
     flex-direction: column;
+  }
+
+  footer div.bg {
+    width: auto;
+  }
+
+  footer .links-container{
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  footer .links-container .links:last-child{
+    grid-column: 1/4;
+  }
+
+  footer .links-container .links p.e_p{
+    width: auto;
+    text-align: justify;
+    
   }
 }
